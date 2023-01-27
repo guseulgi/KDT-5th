@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주문서</title>
+</head>
+<body>
+  <div id="title">
+    <h1>Tetz 카페</h1>  
+    <span>주문자 이름을 입력하세요 : </span>
+    <input type="text" value="name" /> <br/><br/>
+  </div>
+  <hr />
+  <div id="group-order">
+    <h3>단체 주문</h3>
+    <input type="checkbox" name="group-order" value="001"/><span>커피</span>
+    <input type="checkbox" name="group-order" value="002"/><span>차</span>
+    <input type="checkbox" name="group-order" value="003"/><span>라떼</span> <br/><br/>
+    <span>주문 날짜 입력</span><br/><br/>
+    <input type="date" name="주문날짜" /><br/><br/>
+  </div>
+  <hr/>
+  <div id="individual-order">
+    <h3>개별 주문</h3>
+    <input type="radio" name="individual-order" value="01"/><span>커피</span>
+    <input type="radio" name="individual-order" value="02"/><span>차</span>
+    <input type="radio" name="individual-order" value="03"/><span>라떼</span> <br/><br/>
+    <span>주문 날짜 및 시간 입력</span><br/><br/>
+    <input type="datetime-local" name="주문날짜" /><br/><br/>
+  </div>
+  <hr/>
+</body>
+</html>

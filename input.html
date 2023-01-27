@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택</title>
+</head>
+<body>
+  <!--select 사용-->
+  <select name="menu">
+    <optgroup label="coffee">
+      <option value="100">아메리카노</option>
+      <option value="101" disabled>라뗴</option>
+      
+    </optgroup>
+    <optgroup label="tea">
+      <option value="102" selected>녹차</option>
+      <option value="103">얼그레이</option>
+    </optgroup>s
+  </select>
+  <br/>
+  <!--input 사용-->
+  <form>
+    <fieldset>
+      <legend>로그인</legend>
+      <span>ID : </span><input type="text" placeholder="아이디입력" />
+      <input type="button" value="중복체크" onclick="alert('확인!');"/> <br /><br />
+      <span>Password : </span><input type="password" placeholder="대소문자, 특수문자 포함 8~12자"/> <br /><br />
+      <span>Birth : </span><input type="date" name="생일"/> <br/><br/>
+      <span>Hobby : </span>
+      <input type="checkbox" name="hobby" value="01" />운동
+      <input type="checkbox" name="hobby" value="02" />독서
+      <input type="checkbox" name="hobby" value="03" />요리 <br /><br />
+      <span>Wants : </span>
+      <input type="radio" name="goods" value="0001" checked/>과자
+      <input type="radio" name="goods" value="0001"/>사탕
+      <input type="radio" name="goods" value="0001"/>도서 <br /><br />
+    </fieldset>
+  </form>
+</body>
+</html>
