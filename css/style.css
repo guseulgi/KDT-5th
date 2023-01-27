@@ -1,0 +1,11 @@
+/*외부 CSS*/
+@import url("./heading-style.css");
+
+p {
+  color: yellow;
+  background-color: black;
+}
+span {
+  color: aquamarine;
+  background-color: brown;
+}

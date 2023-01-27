@@ -1,0 +1,10 @@
+@import url("./prac-style-import.css");
+/*p 배경 빨강 글자 흰색*/
+p {
+  background-color: red;
+  color:white;
+}
+h3 {
+  color:white;
+  background-color: black;
+}
