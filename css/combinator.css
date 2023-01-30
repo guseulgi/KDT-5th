@@ -1,0 +1,28 @@
+/*일치 선택자: 공백없이 선택자 기재*/
+span.orange {
+  background-color: black;
+}
+
+.orange {
+  color: orange;
+}
+
+/*자식 선택자: 부모요소 > 자식요소*/
+ul > .orange {
+  background-color: green;
+}
+
+/*후손(하위) 선택자: 부모요소 자식요소*/
+div .orange {
+  background-color: brown;
+}
+
+/*인접 형제 선택자: 선택자의 바로 다음 형제 요소를 1개 선택*/
+.orange + div {
+  background-color: yellow;
+}
+
+/*일반 형제 선택자: 선택자의 다음 형제 요소 모두 선택*/
+.orange ~ li {
+  color:yellow;
+}

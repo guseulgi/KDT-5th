@@ -1,0 +1,23 @@
+/*가상 클래스*/
+a:hover {
+  color : red;
+}
+
+a:active {
+  background-color: black;
+}
+
+input:focus {
+  background-color: lemonchiffon;
+}
+
+/*실습*/
+h1:hover {
+  color:red;
+}
+a#action:active {
+  background-color: blue;
+}
+input:focus {
+  background-color: orange;
+}
