@@ -1,5 +1,5 @@
-/*가상 클래스*/
-a:hover {
+/*가상 클래스 -사용자의 행동에 따라 변경*/
+/* a:hover {
   color : red;
 }
 
@@ -9,10 +9,10 @@ a:active {
 
 input:focus {
   background-color: lemonchiffon;
-}
+} */
 
 /*실습*/
-h1:hover {
+/* h1:hover {
   color:red;
 }
 a#action:active {
@@ -20,4 +20,74 @@ a#action:active {
 }
 input:focus {
   background-color: orange;
+} */
+
+/*가상 클래스 -요소 상황*/
+.fruit span:first-child {
+  color:red;
+}
+.fruit h3:last-child {
+  color :aqua;
+}
+.fruit *:nth-child(2) {
+  color : brown;
+}
+
+.fruit *:nth-child(2n+1) {
+  background-color: yellow;
+}
+
+.fruit *:not(span) {
+  color: beige;
+}
+
+/*실습 2*/
+div.zoo *:nth-child(2n) {
+  background-color: orange;
+}
+div.zoo p:first-child {
+  background-color: violet;
+}
+div.zoo *:not(.predator) {
+  background-color: green;
+}
+div.zoo *:last-child {
+  background-color: red;
+}
+div.zoo *:last-child:hover {
+  background-color: yellow;
+}
+
+div.zoo p:nth-child(3) {
+  background-color: blue;
+}
+
+/*가상 요소*/
+.box::before {
+  content:"Before";
+}
+.box::after {
+  content:"After";
+}
+
+/*속성 선택자*/
+[disabled] {
+  background-color: gray;
+}
+
+[type="password"] {
+  background-color: orange;
+}
+
+/*실습3*/
+[disabled] {
+  background-color: red;
+}
+
+[placeholder="이름"] {
+  background-color: orange;
+}
+
+input:not([placeholder]) {
+  background-color: blue;
 }
