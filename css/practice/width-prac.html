@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>크기 요소 실습</title>
+  <!--
+    현재 화면 = viewport
+    div를 현재 화면 넓이의 1/5 + 화면 높이의 1/5인 정사각형
+      -> calc(20vh + 20vw)
+  -->
+  <style>
+    div.kdt {
+      width : calc(20vw + 20vh);
+      height: calc(20vw + 20vh);
+      background-color: lemonchiffon;
+      max-width: 300px;
+      max-height: 300px;
+      min-width: 100px;
+      min-height: 100px;
+      line-height: calc(20vw + 20vh);
+    }
+
+    div.margin div {
+      width:100px;
+      height:100px;
+      background-color: gray;
+    }
+    div.margin .m-all {
+      margin: 10px;
+    }
+    div.margin .mtb-20-mlr-30 {
+      margin: 20px 30px;
+    }
+    div.margin .mt-10-mlr-50-mb-20 {
+      margin: 10px 50px 20px;
+    }
+    div.margin .mt-10-mr-20-mb-30-ml-40 {
+      margin : 10px 20px 30px 40px; 
+    }
+    div.margin:last-child {
+      margin-top: 40px;
+      margin-right: 30px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="kdt">KDT 크기 요소 실습</div>
+  <div class="margin">
+    <div class="m-all"></div>
+    <div class="mtb-20-mlr-30"></div>
+    <div class="mt-10-mlr-50-mb-20"></div>
+    <div class="mt-10-mr-20-mb-30-ml-40"></div>
+    <div></div>
+  </div>
+</body>
+</html>

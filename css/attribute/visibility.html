@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visibility</title>
+  <style>
+    div {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+    }
+    div.opacity {
+      background-color: aqua;
+    }
+    div.opacity:hover {
+      background-color: aqua;
+      opacity: 0;
+    }
+    div.hidden {
+      background-color: yellow;
+
+    }
+    div.hidden:hover {
+      background-color: yellow;
+      visibility: hidden;
+    }
+    div.none {
+      background-color: red;
+    }
+    div.none:hover {
+      background-color: red;
+      display: none;
+    }
+    div.last {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="opacity">hover시 opacity</div>
+  <div class="hidden">hover시 visibility hidden</div>
+  <div class="none">hover시 display none</div>
+  <div class="last">원본</div>
+</body>
+</html>
