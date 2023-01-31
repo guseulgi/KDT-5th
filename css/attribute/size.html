@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 속성의 크기 단위</title>
+  <style>
+    div.px {
+      background-color: yellowgreen;
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+    }
+    div.percent {
+      background-color: yellowgreen;
+      width: 50%;
+      height: 50%;
+      margin: 10px;
+    }
+    div.vwvh {
+      background-color: yellowgreen;
+      width: 50vw;
+      height: 50vh;
+      margin: 10px;
+    }
+    div.em {
+      background-color: yellowgreen;
+      width: 5em;
+      height: 1em; /*16px*/
+      margin: 10px;
+    }
+    div.rem {
+      background-color: yellowgreen;
+      width: 5rem;
+      height: 1rem; /*16px*/
+      margin: 10px;
+    }
+    div.calc {
+      background-color: yellowgreen;
+      width: calc(5rem-2em);
+      height: calc(1920px-2vw);
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="px">px</div>
+  <div class="percent">percent</div>
+  <div class="vwvh">vwvh</div>
+  <div class="em">em</div>
+  <div class="rem">rem</div>
+  <div class="calc">calc</div>
+</body>
+</html>
