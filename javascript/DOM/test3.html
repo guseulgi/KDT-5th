@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습3</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+    }
+    .orange {
+      background-color: orange;
+    }
+    .skyblue {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">box1</div>
+  <div class="box2" onclick="boxClick(this);">box2</div>
+</body>
+<script>
+  const box_1 = document.querySelector('.box1');
+  //const box_2 = document.querySelector('.box2');
+
+  box_1.addEventListener('click', function() {
+    if(this.classList.contains('orange') === false) {
+      this.classList.remove('skyblue');
+      this.classList.add('orange');
+    } else {
+      this.classList.remove('orange');
+      this.classList.add('skyblue');
+    }
+  });
+
+  //box_1.addEventListener('click', boxClick);
+
+  function boxClick(element) {
+    if(element.classList.contains('orange') === false) {
+      element.classList.remove('skyblue');
+      element.classList.add('orange');
+    } else {
+      element.classList.remove('orange');
+      element.classList.add('skyblue');
+    }
+  }
+</script>
+</html>

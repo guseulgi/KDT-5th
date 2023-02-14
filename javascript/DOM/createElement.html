@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>createElement</title>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    const box = document.createElement('div');
+    const li = document.createElement('li');
+    li.textContent = 'test';
+    console.log(box, li);
+
+    const checkBox = document.createElement('input');
+    checkBox.setAttribute('type', 'checkBox');
+    li.append(checkBox);
+    
+
+    const firstLi = document.createElement('li');
+    const inputEl = document.createElement('input');
+    inputEl.setAttribute('type', 'password');
+    firstLi.appendChild(inputEl);
+
+
+    const ulEl = document.querySelector('ul');
+    ulEl.appendChild(li);
+    ulEl.prepend(firstLi);
+
+  </script>  
+</body>
+
+</html>
