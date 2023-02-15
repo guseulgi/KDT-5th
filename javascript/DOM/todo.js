@@ -2,7 +2,53 @@ const todoInputField = document.querySelector('.input-task');
 const todoSendBtn = document.querySelector('.input-btn');
 const todoUlist = document.querySelector('.todo-list');
 
-todoSendBtn.addEventListener('click', function() {
+function deleteList(e) {
+  e.parentNode.remove();
+}
+
+//강사님 코드
+let addList = function() {
+  if(todoInputField.value === "") {
+    todoInputField.setAttribute('placeholder', '내용을 입력하세요');
+    return;
+  }
+
+  const addLi = document.createElement('li');
+  const checkBtn = document.createElement('input');
+  const deleteBtn = document.createElement('button');
+
+  checkBtn.setAttribute('type', 'checkbox');
+  checkBtn.addEventListener('click', function() {
+      if(checkBtn.checked === true) {
+        checkBtn.parentNode.style.textDecoration = 'line-through';
+      } else {
+        checkBtn.parentNode.style.textDecoration = 'none';
+      }
+  });
+
+  deleteBtn.textContent = '삭제';
+  // deleteBtn.addEventListener('click', function(e) {
+  //   e.target.parentNode.remove();
+  // });
+
+  // deleteBtn.onclick = function() {
+  //   this.parentNode.remove();
+  // }
+
+  deleteBtn.setAttribute('onclick', 'deleteList(this)')
+
+  addLi.appendChild(checkBtn);
+  addLi.append(todoInputField.value);
+  addLi.appendChild(deleteBtn);
+
+  todoUlist.appendChild(addLi);
+
+  todoInputField.value = "";
+  todoInputField.focus();
+};
+
+//내가 작성한 코드
+let addItem = function() {
   if(todoInputField.value === "") {
     todoInputField.setAttribute('placeholder', '내용을 입력하세요!');
     return;
@@ -38,10 +84,7 @@ todoSendBtn.addEventListener('click', function() {
   //인풋필드 초기화
   todoInputField.value = "";
   todoInputField.focus();
-});
+};
 
-
-
-
-
-
+//이벤트 리스너
+todoSendBtn.addEventListener('click', addList);
