@@ -1,0 +1,14 @@
+// 파일명 앞에 _ 는 부분 파일이라는 의미(약속)
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a { 
+  text-decoration: none;
+}

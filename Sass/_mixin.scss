@@ -1,0 +1,13 @@
+@mixin button($width: 100%, $bg-color : gray, $font-color : white) {
+  width: $width;
+  height: 30px;
+  background-color: $bg-color;
+  color: $font-color;
+  display: inline-block;
+  text-align: center;
+  border-radius: 13px;
+  font: bold 16px/30px 'arial';
+  margin-top: 10px;
+  transition: .4s;
+  border:1px solid $wrap-border;
+}

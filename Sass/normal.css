@@ -1,0 +1,59 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a { 
+  text-decoration: none;
+}
+
+/* Main */
+.wrap {
+  display: flex;
+  background-color: #eee;
+  width: 100%;
+  padding: 100px;
+  border: 2px solid #ddd;
+}
+.wrap .item {
+  background-color: #fff;
+  width: 300px;
+  padding: 40px 20px;
+  margin: 0 20px;
+
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px #ccc;
+}
+.wrap .item h2 {
+  font: bold 30px/1 'arial';
+  margin-bottom: 20px;
+  color: #333;
+}
+.wrap .item p {
+  font : normal 16px/1.5 'arial';
+  color : #7b7b7b;
+}
+.wrap .item a {
+  width: 80px;
+  height: 30px;
+  background-color: #555;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  border-radius: 13px;
+  font: bold 16px/30px 'arial';
+  margin-top: 10px;
+  transition: .4s;
+  border:1px solid #333;
+}
+
+.wrap .item a:hover {
+  background-color: white;
+  color: #333;
+}

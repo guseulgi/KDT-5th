@@ -1,0 +1,124 @@
+@import "reset";
+@import 'mixin';
+
+// 변수
+// $body-bg : #111;
+$body-bg : white;
+$wrap-border : #ddd;
+// $wrap__item-bg : #111;
+$wrap__item-bg : #ccc;
+$wrap__item_h2 : #333;
+$wrap__item_p : #777;
+$btn-bg : orange;
+$btn-font: white;
+$wrap__item-shadow : 5px 5px 20px rgba(0, 0, 0, 0.1);
+
+body {
+  background-color: $body-bg;
+}
+
+// Main
+.wrap {
+  display: flex;
+  background-color: $body;
+  width: 100%;
+  padding: 100px;
+  border: 2px solid $wrap-border;
+  perspective: 600px;
+
+  &:hover {
+    .item {
+      transform: translateY(0px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  .item {
+    background-color: $wrap__item-bg;
+    width: 300px;
+    padding: 40px 20px;
+    margin: 0 20px;
+  
+    border-radius: 30px;
+    box-shadow: $wrap__item-shadow;
+
+    transform: translateY(100px) rotateY(180deg);
+    transition: .6s;
+    opacity: 0;
+
+    // &:first-child {
+    //   transition-delay: .1s;
+    // }
+    // &:nth-child(2) {
+    //   transition-delay: .2s;
+    // }
+    // &:nth-child(3) {
+    //   transition-delay: .3s;
+    // }
+    // &:last-child {
+    //   transition-delay: .4s;
+    // }
+
+    // $interval : 0.2s;
+    // @for $i from 1 to 5 {
+    //   &:nth-child(#{$i}) {
+    //     transition-delay: $interval * $i;
+    //   }
+    // }
+
+    h2 {
+      font: bold 30px/1 'arial';
+      margin-bottom: 20px;
+      
+      @if $wrap__item-bg == #fff {
+        color:$wrap__item_h2
+      } @else {
+        color : white;
+      }
+    }
+    p {
+      font : normal 16px/1.5 'arial';
+
+      @if $wrap__item-bg == #fff {
+        color:$wrap__item_p;
+      } @else {
+        color:white;
+      }
+    }
+
+    $interval : 0.2s;
+    $bgColors : (orange, black, hotpink, aqua, lightgreen);
+    @each $el in $bgColors {
+      $index : index($list: $bgColors, $value:$el);
+      &:nth-child(#{$index}) {
+        transition-delay: $interval * $index;
+        a {
+          @include button($bg-color : $el);
+        }
+        
+      }
+    }
+
+    a {
+      // width: 80px;
+      // height: 30px;
+      // background-color: $btn-bg;
+      // color: $btn-font;
+      // display: inline-block;
+      // text-align: center;
+      // border-radius: 13px;
+      // font: bold 16px/30px 'arial';
+      // margin-top: 10px;
+      // transition: .4s;
+      // border:1px solid $wrap-border;
+      
+      //@include button(80px, $btn-bg, $btn-font);
+      @include button(); //default 값으로 나오게!
+
+      &:hover {
+        background-color: $wrap__item-bg;
+        color: $wrap__item_h2;
+      }
+    }
+  }
+}
