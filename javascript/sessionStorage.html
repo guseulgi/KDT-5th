@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>세션</title>
+</head>
+<body>
+  
+</body>
+<script>
+  window.localStorage.clear();
+  window.localStorage.setItem('강아지', '멍멍');
+  window.localStorage.setItem('고양이', '야옹');
+  window.localStorage.setItem('피카츄', '피카');
+  window.localStorage.setItem('비둘기', '구구');
+  window.localStorage.setItem('소', '음머');
+
+  const len = window.localStorage.length;
+  for(let i = 0; i < len; i++) {
+    let key = window.localStorage.key(i);
+    let value = window.localStorage.getItem(key);
+    console.log(`${key}는 '${value}' 웁니다`);
+  }
+
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>keyframe</title>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: aquamarine;
+    }
+
+    body:hover div {
+      animation : divAnimate2 2s infinite linear;
+    }
+    @keyframes divAnimate {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(100px, 200px);
+      }
+    }
+
+    @keyframes divAnimate2 {
+      0% {
+        transform: translate(0, 0);
+      }
+      /* 25% {
+        transform: translate(50px, 100px);
+      } */
+      50% {
+        transform: translate(100px, 200px);
+      }
+      /* 75% {
+        transform : translate(100px, 50px);
+      } */
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+<script>
+  window.localStorage.setItem('이름', '이순신');
+
+  let obj = {
+    name : '길동',
+    age : 30,
+  };
+  //console.log(obj);
+
+  const seulgiJson = JSON.stringify(obj);
+  // const seulgiObj = JSON.parse(seulgiJson);
+  // console.log(seulgiJson);
+
+  // console.log(seulgiObj);
+  // console.log(window.localStorage.getItem('이름'));
+
+  window.localStorage.setItem('User', seulgiJson);
+  const seulgiObj = JSON.parse(window.localStorage.getItem('User'));
+
+  console.log(seulgiObj);
+
+  window.localStorage.setItem('뽀로로', '뽀로로예요');
+  console.log(window.localStorage.getItem('뽀로로'));
+  window.localStorage.removeItem('뽀로로');
+  console.log(window.localStorage.getItem('뽀로로'));
+  console.log(window.localStorage);
+
+  window.localStorage.clear();
+  window.localStorage.setItem('강아지', '멍멍');
+  window.localStorage.setItem('고양이', '야옹');
+  console.log(window.localStorage.length);
+  console.log(window.localStorage.key(0));
+  console.log(window.localStorage.key(2));
+</script>
+</html>
